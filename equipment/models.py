@@ -10,3 +10,6 @@ class Equip(models.Model):
     # safety_rating = models.IntegerChoices(default=0)
     installer = models.TextField()
     inspector = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
